@@ -1,0 +1,38 @@
+.note-list-container {
+    width: 15%;
+    border-right: 1px solid #ccc;
+    padding: 10px;
+    /* background-color: #fefefe; */
+    background-color: #f7f7f7;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+
+    .note-item {
+        display: flex;
+        padding: 10px;
+        margin: 5px 0;
+        cursor: pointer;
+        border-radius: 4px;
+    }
+
+    .note-content {
+        flex: 1;
+    }
+
+    .note-meta {
+        font-size: 0.85em;
+        color: #666;
+    }
+
+    .note-actions {
+        display: flex;
+        align-items: center;
+    }
+
+    .note-item.selected {
+        background-color: #dcdcdc;
+    }
+
+
+}

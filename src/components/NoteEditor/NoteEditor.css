@@ -1,0 +1,44 @@
+.note-editor {
+    display: flex;
+    flex: 1;
+}
+
+.toolbar {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.toolbar button {
+    margin-right: 10px;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.toolbar-color-selector {
+    margin-left: 10px;
+}
+
+.toolbar select,
+.toolbar input[type="number"] {
+    padding: 5px;
+}
+
+.toolbar-color-selector {
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    margin-left: 10px;
+    border: none;
+}
+
+.editor-content {
+    flex: 1;
+    border: 1px solid #ccc;
+    padding: 10px;
+    height: auto;
+    overflow-y: auto;
+    border-radius: 4px;
+}

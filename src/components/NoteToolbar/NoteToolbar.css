@@ -1,0 +1,42 @@
+/* Base style for toolbar buttons */
+.toolbar button {
+    padding: 5px 10px;
+    margin-right: 10px;
+    background-color: #a9a9a9;
+    border: 1px solid #999;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Style when button is hovered */
+.toolbar button:hover {
+    background-color: #c0c0c0;
+}
+
+/* Style when button is selected (active) */
+.toolbar button.active {
+    background-color: #4CAF50;
+    border-color: #666;
+}
+
+/* Style for icons inside the buttons */
+.toolbar button i {
+    font-size: 16px;
+    color: #333;
+}
+
+/* Specific styles for Bold, Italic, and Underline buttons */
+.toolbar button.bold {
+    font-weight: bold;
+}
+
+.toolbar button.italic {
+    font-style: italic;
+}
+
+.toolbar button.underline {
+    text-decoration: underline;
+}

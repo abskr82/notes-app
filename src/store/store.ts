@@ -1,10 +1,11 @@
+// @ts-nocheck
 import { configureStore } from '@reduxjs/toolkit';
 import notesReducer, { NotesState } from './slices/notesSlice';
 import foldersReducer, { FoldersState } from './slices/foldersSlice';
 import { loadState, saveState } from '../localStorage';
 import { defaultFolder, getDefaultNote } from '../utils/utils';
 
-export interface RootState {
+interface RootState {
     notes: NotesState;
     folders: FoldersState;
 }

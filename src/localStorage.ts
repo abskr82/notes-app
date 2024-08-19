@@ -1,3 +1,4 @@
+// localstorage.ts
 export const loadState = <T>(key: string): T | undefined => {
     try {
         const serializedState = localStorage.getItem(key);

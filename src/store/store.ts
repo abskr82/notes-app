@@ -1,4 +1,5 @@
 // @ts-nocheck
+// store.ts
 import { configureStore } from '@reduxjs/toolkit';
 import notesReducer, { NotesState } from './slices/notesSlice';
 import foldersReducer, { FoldersState } from './slices/foldersSlice';

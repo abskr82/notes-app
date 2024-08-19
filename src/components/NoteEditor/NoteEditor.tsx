@@ -66,6 +66,7 @@ export const NoteEditor: React.FC<NoteEditorProps> = ({ onSelectionChange }) => 
         <div className="note-editor">
             <div
                 className="editor-content"
+                data-testid="notes-editor"
                 contentEditable
                 ref={contentRef}
                 dangerouslySetInnerHTML={{ __html: content }}

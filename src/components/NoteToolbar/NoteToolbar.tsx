@@ -26,19 +26,26 @@ export const NoteToolbar: React.FC<NoteToolbarProps> = ({ isBold, isItalic, isUn
         const size = e.target.value;
         if (parseInt(size) >= 9 && parseInt(size) <= 100) {
             setFontSize(size);
-            applyStyle('fontSize', size);
+
+            const selection = window.getSelection();
+            if (selection && selection.rangeCount > 0) {
+                const range = selection.getRangeAt(0);
+                const span = document.createElement('span');
+                span.style.fontSize = `${size}px`;
+                range.surroundContents(span);
+            }
         }
     };
 
     return (
         <div className="toolbar">
-            <button className={`bold ${isBold ? 'active' : ''}`} onClick={onBoldClick}>
+            <button className={`bold ${isBold ? 'active' : ''}`} onClick={onBoldClick} data-testid="button-bold">
                 <FontAwesomeIcon icon={faBold} />
             </button>
-            <button className={`italic ${isItalic ? 'active' : ''}`} onClick={onItalicClick}>
+            <button className={`italic ${isItalic ? 'active' : ''}`} onClick={onItalicClick} data-testid="button-italic">
                 <FontAwesomeIcon icon={faItalic} />
             </button>
-            <button className={`underline ${isUnderline ? 'active' : ''}`} onClick={onUnderlineClick}>
+            <button className={`underline ${isUnderline ? 'active' : ''}`} onClick={onUnderlineClick} data-testid="button-underline">
                 <FontAwesomeIcon icon={faUnderline} />
             </button>
             <select value={fontSize} onChange={handleFontSizeChange}>
@@ -46,15 +53,7 @@ export const NoteToolbar: React.FC<NoteToolbarProps> = ({ isBold, isItalic, isUn
                     <option key={size} value={size}>{size}px</option>
                 ))}
             </select>
-            <input
-                type="number"
-                min="9"
-                max="100"
-                value={fontSize}
-                onChange={handleFontSizeChange}
-                style={{ width: '50px', marginLeft: '10px' }}
-            />
-            <input className='toolbar-color-selector' type="color" onChange={(e) => applyStyle('foreColor', e.target.value)} />
+            <input className='toolbar-color-selector' type="color" onChange={(e) => applyStyle('foreColor', e.target.value)} data-testid="color-picker" />
         </div>
     )
 }

@@ -38,6 +38,7 @@ const NoteList: React.FC = () => {
                                 dispatch(deleteNote(note.id));
                             }}
                             className="delete-icon"
+                            data-testid={`delete-note-${note.id}`}
                         />
                     </div>
                 </div>

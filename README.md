@@ -1,50 +1,63 @@
-# React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Notes App with React + TypeScript + Vite
 
-Currently, two official plugins are available:
+This project is a minimal Notes application built using React, TypeScript, and Vite. The app allows users to create, edit, and manage notes with features like text formatting, folder management, and persistent storage.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## Expanding the ESLint configuration
+- **Create and Edit Notes**: Users can create new notes, edit existing ones, and organize them into folders.
+- **Text Formatting**: Supports basic text formatting such as bold, italic, underline, and font size adjustments.
+- **Folder Management**: Organize notes into different folders for better management.
+- **Persistent Storage**: Notes and folders are stored locally, ensuring they persist across sessions.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Live Demo
 
-- Configure the top-level `parserOptions` property like this:
+The app is deployed on Vercel and can be accessed live at the following URL:
+**[Live Demo](https://notes-bb5bzgz8u-abhishek-kumars-projects-bffa60ed.vercel.app)**
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## Running the Project Locally
+
+To run this project locally, follow these steps:
+
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/yourusername/notes-app.git
+   cd notes-app
+   ```
+
+2. **Install dependencies**:
+   ```bash
+   yarn
+   ```
+
+3. **Start the development server**:
+   ```bash
+   yarn dev
+   ```
+
+   The app will be available at `http://localhost:5173`.
+
+4. **Build for production**:
+   ```bash
+   yarn build
+   ```
+
+5. **Preview the production build**:
+   ```bash
+   yarn preview
+   ```
+
+## Testing the Application
+
+This project uses Vitest and React Testing Library (RTL) for unit and integration testing.
+
+### Running Tests
+
+To run the test suite, use the following command:
+
+```bash
+yarn test
 ```
+## License
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+This project is licensed under the MIT License.

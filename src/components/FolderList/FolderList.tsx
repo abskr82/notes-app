@@ -10,7 +10,7 @@ import { addNote } from '../../store/slices/notesSlice';
 
 import './FolderList.css';
 
-const FolderList: React.FC = () => {
+export const FolderList: React.FC = () => {
     const folders = useSelector((state: RootState) => state.folders.folders);
     const selectedFolderId = useSelector((state: RootState) => state.folders.selectedFolderId);
     const notes = useSelector((state: RootState) => state.notes.notes);
@@ -74,4 +74,3 @@ const FolderList: React.FC = () => {
     );
 };
 
-export default FolderList;

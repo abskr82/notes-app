@@ -2,7 +2,7 @@
 import { render, screen, fireEvent } from '@testing-library/react';
 import { Provider } from 'react-redux';
 import { vi } from 'vitest';
-import Header from './Header';
+import { Header } from './Header';
 import { configureStore } from '@reduxjs/toolkit';
 import notesReducer from '../../store/slices/notesSlice';
 import foldersReducer from '../../store/slices/foldersSlice';

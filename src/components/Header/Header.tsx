@@ -7,7 +7,7 @@ import { faPlus } from '@fortawesome/free-solid-svg-icons/faPlus';
 
 import './Header.css';
 
-const Header = () => {
+export const Header = () => {
     const dispatch = useDispatch();
     const selectedFolderId = useSelector(selectedFolderIdSelector);
     const handleCreateNote = () => {
@@ -24,4 +24,3 @@ const Header = () => {
     );
 };
 
-export default Header;

@@ -10,7 +10,7 @@ import { selectNote, deleteNote, selectNotesInSelectedFolder } from '../../store
 
 import './NoteList.css';
 
-const NoteList: React.FC = () => {
+export const NoteList: React.FC = () => {
 
     const notes = useSelector(selectNotesInSelectedFolder);
     const selectedNoteId = useSelector((state: RootState) => state.notes.selectedNoteId);
@@ -46,5 +46,3 @@ const NoteList: React.FC = () => {
         </div>
     );
 };
-
-export default NoteList;

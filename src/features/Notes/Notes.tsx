@@ -1,7 +1,7 @@
-import FolderList from "../../components/FolderList/FolderList"
-import Header from "../../components/Header/Header"
+import { FolderList } from "../../components/FolderList/FolderList"
+import { Header } from "../../components/Header/Header"
 import { NoteEditorContainer } from "../../components/NoteEditorContainer/NoteEditorContainer"
-import NoteList from "../../components/NoteList/NoteList"
+import { NoteList } from "../../components/NoteList/NoteList"
 
 import './Notes.css';
 

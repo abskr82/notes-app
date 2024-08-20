@@ -3,15 +3,15 @@
 <html lang="en">
 
 <head>
-    <title>Code coverage report for src/components/Header.tsx</title>
+    <title>Code coverage report for src/features/Notes/Notes.tsx</title>
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="../../prettify.css" />
-    <link rel="stylesheet" href="../../base.css" />
-    <link rel="shortcut icon" type="image/x-icon" href="../../favicon.png" />
+    <link rel="stylesheet" href="../../../prettify.css" />
+    <link rel="stylesheet" href="../../../base.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="../../../favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <style type='text/css'>
         .coverage-summary .sorter {
-            background-image: url(../../sort-arrow-sprite.png);
+            background-image: url(../../../sort-arrow-sprite.png);
         }
     </style>
 </head>
@@ -19,13 +19,13 @@
 <body>
 <div class='wrapper'>
     <div class='pad1'>
-        <h1><a href="../../index.html">All files</a> / <a href="index.html">src/components</a> Header.tsx</h1>
+        <h1><a href="../../../index.html">All files</a> / <a href="index.html">src/features/Notes</a> Notes.tsx</h1>
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">0% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/17</span>
+                <span class='fraction'>0/16</span>
             </div>
         
             
@@ -46,7 +46,7 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">0% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/17</span>
+                <span class='fraction'>0/16</span>
             </div>
         
             
@@ -81,23 +81,7 @@
 <a name='L16'></a><a href='#L16'>16</a>
 <a name='L17'></a><a href='#L17'>17</a>
 <a name='L18'></a><a href='#L18'>18</a>
-<a name='L19'></a><a href='#L19'>19</a>
-<a name='L20'></a><a href='#L20'>20</a>
-<a name='L21'></a><a href='#L21'>21</a>
-<a name='L22'></a><a href='#L22'>22</a></td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<a name='L19'></a><a href='#L19'>19</a></td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -105,44 +89,51 @@
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js"><span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" ><span class="branch-0 cbranch-no" title="branch not covered" >import { useDispatch, useSelector } from 'react-redux';</span></span></span>
-<span class="cstat-no" title="statement not covered" >import { addNote } from '../store/slices/notesSlice';</span>
-<span class="cstat-no" title="statement not covered" >import { getDefaultNote } from '../utils/utils';</span>
-<span class="cstat-no" title="statement not covered" >import { selectedFolderIdSelector } from '../store/slices/foldersSlice';</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js"><span class="cstat-no" title="statement not covered" >import FolderList from "../../components/FolderList/FolderList"<span class="fstat-no" title="function not covered" ><span class="branch-0 cbranch-no" title="branch not covered" ></span></span></span>
+<span class="cstat-no" title="statement not covered" >import Header from "../../components/Header/Header"</span>
+<span class="cstat-no" title="statement not covered" >import { NoteEditorContainer } from "../../components/NoteEditorContainer/NoteEditorContainer"</span>
+<span class="cstat-no" title="statement not covered" >import NoteList from "../../components/NoteList/NoteList"</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >const Header = () =&gt; {</span>
-<span class="cstat-no" title="statement not covered" >    const dispatch = useDispatch();</span>
-<span class="cstat-no" title="statement not covered" >    const selectedFolderId = useSelector(selectedFolderIdSelector);</span>
-<span class="cstat-no" title="statement not covered" >    const handleCreateNote = () =&gt; {</span>
-<span class="cstat-no" title="statement not covered" >        dispatch(addNote(getDefaultNote(selectedFolderId || 'default')));</span>
-<span class="cstat-no" title="statement not covered" >    };</span>
+<span class="cstat-no" title="statement not covered" >import './Notes.css';</span>
 &nbsp;
+<span class="cstat-no" title="statement not covered" >export const Notes = () =&gt; {</span>
 <span class="cstat-no" title="statement not covered" >    return (</span>
-<span class="cstat-no" title="statement not covered" >        &lt;header className="header"&gt;</span>
-<span class="cstat-no" title="statement not covered" >            &lt;h1&gt;Notes App&lt;/h1&gt;</span>
-<span class="cstat-no" title="statement not covered" >            &lt;button onClick={handleCreateNote}&gt;Create Note&lt;/button&gt;</span>
-<span class="cstat-no" title="statement not covered" >        &lt;/header&gt;</span>
-    );
-<span class="cstat-no" title="statement not covered" >};</span>
-&nbsp;
-<span class="cstat-no" title="statement not covered" >export default Header;</span>
-&nbsp;</pre></td></tr></table></pre>
+<span class="cstat-no" title="statement not covered" >        &lt;div className="notes-container"&gt;</span>
+<span class="cstat-no" title="statement not covered" >            &lt;Header /&gt;</span>
+<span class="cstat-no" title="statement not covered" >            &lt;main className="notes"&gt;</span>
+<span class="cstat-no" title="statement not covered" >                &lt;FolderList /&gt;</span>
+<span class="cstat-no" title="statement not covered" >                &lt;NoteList /&gt;</span>
+<span class="cstat-no" title="statement not covered" >                &lt;NoteEditorContainer /&gt;</span>
+<span class="cstat-no" title="statement not covered" >            &lt;/main&gt;</span>
+<span class="cstat-no" title="statement not covered" >        &lt;/div&gt;</span>
+    )
+<span class="cstat-no" title="statement not covered" >}</span></pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
             </div><!-- /wrapper -->
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2024-08-19T07:48:39.988Z
+                at 2024-08-20T03:23:58.299Z
             </div>
-        <script src="../../prettify.js"></script>
+        <script src="../../../prettify.js"></script>
         <script>
             window.onload = function () {
                 prettyPrint();
             };
         </script>
-        <script src="../../sorter.js"></script>
-        <script src="../../block-navigation.js"></script>
+        <script src="../../../sorter.js"></script>
+        <script src="../../../block-navigation.js"></script>
     </body>
 </html>
     

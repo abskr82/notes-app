@@ -2,7 +2,7 @@
 import { render, screen, fireEvent } from '@testing-library/react';
 import { Provider } from 'react-redux';
 import configureStore from 'redux-mock-store';
-import FolderList from './FolderList';
+import { FolderList } from './FolderList';
 import { RootState } from '../../store/store';
 import { addFolder, selectFolder } from '../../store/slices/foldersSlice';
 

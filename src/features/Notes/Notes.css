@@ -1,0 +1,6 @@
+.notes-container {
+    .notes {
+        display: flex;
+        height: 93vh;
+    }
+}

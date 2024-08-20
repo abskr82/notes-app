@@ -13,7 +13,7 @@ This project is a minimal Notes application built using React, TypeScript, and V
 ## Live Demo
 
 The app is deployed on Vercel and can be accessed live at the following URL:
-**[Live Demo](https://notes-bb5bzgz8u-abhishek-kumars-projects-bffa60ed.vercel.app)**
+**[Live Demo](https://notes-app-lovat-mu.vercel.app/)**
 
 ## Running the Project Locally
 
